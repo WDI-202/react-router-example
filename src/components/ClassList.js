@@ -3,7 +3,7 @@ import participants from "../utils/ParticipantList";
 
 const ClassList = () => {
     const [searchParams, setSearchParams] = useSearchParams();
-    const sortOrder =  searchParams.get("sortOrder")
+    const sortOrder = searchParams.get("sortOrder") || "asc"
 
     function compare(a, b) {
         if (sortOrder.toLowerCase() === "asc") {
