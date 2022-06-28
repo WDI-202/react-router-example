@@ -1,19 +1,8 @@
 import { useParams } from "react-router-dom";
 
-const participants = [
-  "james",
-  "ginny",
-  "anson",
-  "corey",
-  "jill",
-  "sonny",
-  "antonio",
-];
-
-const Participant = () => {
+const Participant = (props) => {
     let params = useParams();
-    console.log(participants.includes(params.participant))
-    const displayParticipant = participants.includes(params.participant) ? params.participant : "Not Found"
+    const displayParticipant = props.participants.includes(params.participant) ? params.participant : "Not Found"
   return (
     <>
       <p>{displayParticipant}</p>
