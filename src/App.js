@@ -25,7 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />}>
-            <Route path="/about/info" element={<Info />} />
+            <Route index element={<Info />} />
             <Route path="class-list" element={<ClassList />} />
             <Route path=":participant" element={<Participant participants={participants}/>} />
           </Route>
